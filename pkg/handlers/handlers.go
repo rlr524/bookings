@@ -61,7 +61,7 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 // Madison is the /madison page handler
 func (m *Repository) Madison(w http.ResponseWriter, r *http.Request) {
 	stringMap := make(map[string]string)
-	stringMap["check"] = "Madison, are you behaving yourself?"
+	stringMap["check"] = "Madison, what are you shopping for?"
 
 	template.RenderTemplate(w, "madison.page.gohtml", &models.TemplateData{
 		StringMap: stringMap,
