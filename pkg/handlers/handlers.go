@@ -34,8 +34,8 @@ func NewHandlers(rp *Repository) {
 }
 
 // Home is the / page handler. All web handler functions need to take in, as params,
-// the ResponseWriter(w) method and a pointer to the Request(r) method
-// All of the handlers also have a receiver via a pointer (m) to the repository and have access to the repository
+// the ResponseWriter(w) method and a pointer to the Request(r) method.
+// All the handlers also have a receiver via a pointer (m) to the repository and have access to the repository
 func (m *Repository) Home(w http.ResponseWriter, r *http.Request) {
 	// Get the user's IP address and store it as a session cookie named "remote_ip"
 	remoteIP := r.RemoteAddr

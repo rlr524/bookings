@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <title>Make a Reservation</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Bookings</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Rooms
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="generals.html">General's Quarters</a>
+            <a class="dropdown-item" href="majors.html">Major's Suite</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="reservations.html">Reservations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="text-center mt-4">Make a Reservation</h1>
+      <p></p>
+    </div>
+      <form action="" method="POST" class="needs-validation" novalidate>
+        <div class="row justify-content-md-center">
+          <div class="col col-md-4 mb-3">
+            <label for="first-name">First Name:</label>
+            <input type="text" name="first-name" id="first-name" aria-describedby="first-name-input" required
+                   autocomplete="off">
+            <div id="first-name-input" class="form-text">Enter your first name</div>
+          </div>
+          <div class="col col-md-4 mb-3">
+            <label for="last-name">Last Name:</label>
+            <input type="text" name="last-name" id="last-name" aria-describedby="last-name-input" required
+                   autocomplete="off">
+            <div id="last-name-input" class="form-text">Enter your last name</div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col col-md-4 mb-3">
+            <label for="num-guests">Guests:</label>
+            <input type="number" name="num-guests" id="num-guests" aria-describedby="num-guests-input" required
+                   autocomplete="off">
+            <div id="num-guests-input" class="form-text">Enter the number of guests</div>
+          </div>
+          <div class="col col-md-4 mb-3">
+            <label for="num-guests-minors">Guests under 21:</label>
+            <input type="number" name="num-guests-minors" id="num-guests-minors" aria-describedby="num-guests-minors-input" required
+                   autocomplete="off">
+            <div id="num-guests-minors-input" class="form-text">Enter the number of minor guests</div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col col-md-4 mb-3">
+            <label for="st-date">Start Date:</label>
+            <input type="date" name="st-date" id="st-date" aria-describedby="st-date-input" required
+                   autocomplete="off">
+            <div id="st-date-input" class="form-text">Enter the day you'll check in</div>
+          </div>
+          <div class="col col-md-4 mb-3">
+            <label for="end-date">End Date:</label>
+            <input type="date" name="end-date" id="end-date" aria-describedby="end-date-input" required
+                   autocomplete="off">
+            <div id="end-date-input" class="form-text">Enter the date you'll check out</div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Book My Stay!</button>
+      </form>
+    </div>
+  </div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col">
+        left
+      </div>
+
+      <div class="col">
+        center
+      </div>
+
+      <div class="col">
+        right
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous">
+</script>
+</body>
+</html>

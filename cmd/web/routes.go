@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 )
 
-func Routes(app *config.AppConfig) http.Handler {
+func Routes(_ *config.AppConfig) http.Handler {
 	mux := chi.NewRouter()
 
 	mux.Use(middleware.Recoverer)
@@ -19,10 +19,10 @@ func Routes(app *config.AppConfig) http.Handler {
 	mux.Get("/", handlers.Repo.Home)
 	mux.Get("/about", handlers.Repo.About)
 	mux.Get("/madison", handlers.Repo.Madison)
-	
-	fileServer := http.FileServer(neuteredFileSystem{http.Dir("./static/")})
+
+	fs := http.FileServer(neuteredFileSystem{http.Dir("./static/")})
 	mux.Handle("/static", http.NotFoundHandler())
-	mux.Handle("/static/*", http.StripPrefix("/static", fileServer))
+	mux.Handle("/static/*", http.StripPrefix("/static", fs))
 
 	return mux
 }
@@ -37,7 +37,7 @@ func (nfs neuteredFileSystem) Open(path string) (http.File, error) {
 	if err != nil {
 		return nil, err
 	}
-	
+
 	s, err := f.Stat()
 	if s.IsDir() {
 		index := filepath.Join(path, "index.html")
